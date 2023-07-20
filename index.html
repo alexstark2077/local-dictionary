@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Local Dictionary</title>
+</head>
+<body>
+
+    <main class="main">
+        <div class="change-colors">
+            <div class="change-colors__options">
+                <button class="change-colors__option" data-color="green"></button>
+                <button class="change-colors__option" data-color="coldblue"></button>
+                <button class="change-colors__option" data-color="white"></button>
+                <button class="change-colors__option" data-color="bloody"></button>
+            </div>
+            <div class="change-colors__title">Change colors</div>
+        </div>
+
+        <h1 class="title">Your Local Dictionary</h1>
+
+        <div class="controls">
+            <div class="change-view">
+                <div class="change-view__title">Change view:</div>
+                <button class="change-view__btn active view-rows" data-view="rows"><img src="rows.png" alt="rows"></button>
+                <button class="change-view__btn view-grid" data-view="grid"><img src="grid.png" alt="grid"></button>
+                <button class="change-view__btn view-two-columns" data-view="two-columns"><img src="columns.png" alt="columns"></button>
+                <button class="see-all">See all</button>
+            </div>
+            <button class="controls__btn active">Add New</button>
+            <button class="controls__btn">See All</button>
+            <div class="controls__box">
+                <div class="entries-count">Entries: <span>0</span></div>
+                <button class="export__btn">Export</button>
+            </div>
+        </div>
+
+        <form action="#" class="form form__add-new">
+            <label class="form__input-box">
+                <span class="form__input-name">example of usage (in a sentence or phrase):</span>
+                <input tabindex="1" type="text" class="form__input form__input--example">
+            </label>
+            <label class="form__input-box">
+                <span class="form__input-name">what does it mean?</span>
+                <input tabindex="2" type="text" class="form__input form__input--meaning">
+            </label>
+            <label class="form__input-box">
+                <span class="form__input-name">2-3 synonyms:</span>
+                <input tabindex="3" type="text" class="form__input form__input--synonyms">
+            </label>
+            <label class="form__input-box">
+                <span class="form__input-name">just the word:</span>
+                <input tabindex="4" type="text" class="form__input form__input--word">
+            </label>
+            <div class="form__input-tags">
+                <div class="form__input-tags-title">Select tag:</div>
+                <label class="form__input-tag">
+                    <span class="form__input-tag-name">Noun</span>
+                    <input tabindex="5" value="noun" name="tag" type="radio" class="form__input-tag-check-old checkbox-noun input-hidden"></input>
+                    <span class="form__input-tag-check"></span>
+                </label>
+                <label class="form__input-tag">
+                    <span class="form__input-tag-name">Adjective</span>
+                    <input tabindex="5" value="adjective" name="tag" type="radio" class="form__input-tag-check-old checkbox-adjective input-hidden"></input>
+                    <span class="form__input-tag-check"></span>
+                </label>
+                <label class="form__input-tag">
+                    <span class="form__input-tag-name">Verb</span>
+                    <input tabindex="5" value="verb" name="tag" type="radio" class="form__input-tag-check-old checkbox-verb input-hidden"></input>
+                    <span class="form__input-tag-check"></span>
+                </label>
+                <label class="form__input-tag">
+                    <span class="form__input-tag-name">Phrasal Verb</span>
+                    <input tabindex="6" value="phrasal-verb" name="tag" type="radio" class="form__input-tag-check-old checkbox-phrasal-verb input-hidden"></input>
+                    <span class="form__input-tag-check"></span>
+                </label>
+                <label class="form__input-tag">
+                    <span class="form__input-tag-name">Idiom</span>
+                    <input tabindex="7" value="idiom" name="tag" type="radio" class="form__input-tag-check-old checkbox-idiom input-hidden"></input>
+                    <span class="form__input-tag-check"></span>
+                </label>
+                <label class="form__input-tag">
+                    <span class="form__input-tag-name">Other</span>
+                    <input tabindex="7" value="other" name="tag" type="radio" class="form__input-tag-check-old checkbox-other input-hidden"></input>
+                    <span class="form__input-tag-check"></span>
+                </label>
+            </div>
+            <button tabindex="8" class="form__add-new-submit">Add</button>
+        </form>
+
+        <div class="results" data-view="rows">
+        </div>
+
+    </main>
+    
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
